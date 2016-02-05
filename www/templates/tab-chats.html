@@ -1,0 +1,36 @@
+<div class="rcontainer">
+
+<div class="reveal" style="flex-grow:1;height:auto;">
+	
+				<!-- Any section element inside of this container is displayed as a slide -->
+				<div class="slides">
+				</div>
+			</div>
+			<h1 class="ans" style="">
+				<span ng-repeat="d in ansDigs" style="color: {{d.color}}">{{d.number || d.number === 0? d.number : '-'}}</span>
+				<i ng-if="ansRight" class="icon ion-checkmark animated bounceIn" style="position:absolute;right:10px;"></i>
+			</h1>
+		<table class="numpad" style="">
+				<tr>
+					<td ng-click="doClickNum(1)">1</td>
+					<td ng-click="doClickNum(2)">2</td>
+					<td ng-click="doClickNum(3)">3</td>
+				</tr>
+				<tr>
+					<td ng-click="doClickNum(4)">4</td>
+					<td ng-click="doClickNum(5)">5</td>
+					<td ng-click="doClickNum(6)">6</td>
+				</tr>
+				<tr>
+					<td ng-click="doClickNum(7)">7</td>
+					<td ng-click="doClickNum(8)">8</td>
+					<td ng-click="doClickNum(9)">9</td>
+				</tr>
+				<tr>
+					<td style="color:red;"><i class="icon ion-heart"></i></td>
+					<td ng-click="doClickNum(0)">0</td>
+					<td ng-click="doClickNum(-1)"><i class="icon ion-ios-close"></i></td>
+				</tr>
+			</table>
+			
+</div>

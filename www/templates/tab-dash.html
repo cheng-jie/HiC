@@ -1,0 +1,56 @@
+<ion-content has-bouncing="false">
+	<ion-scroll>
+	<ul class="list">
+		<li class="item item-toggle">加法 + <label
+			class="toggle"> <input type="checkbox" ng-model="op.plus">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+		</label>
+		</li>
+		
+		<li class="item item-toggle">减法 - <label
+			class="toggle"> <input type="checkbox" ng-model="op.min">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+		</label>
+		</li>
+		
+		<li class="item item-toggle">乘法 * <label
+			class="toggle"> <input type="checkbox" ng-model="op.mult">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+		</label>
+		</li>
+		
+		<li class="item item-toggle">除法 / <label
+			class="toggle"> <input type="checkbox" ng-model="op.div">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+		</label>
+		</li>
+		
+		<li class="item item-input item-select">
+		    <div class="input-label">
+		      最大数限制
+		    </div>
+		    <select ng-options="item.value for item in lims track by item.value" ng-model="selection.selectedLim">
+		    </select>
+		  </li>
+		  
+		 <li class="item item-input item-select">
+		    <div class="input-label">
+		      题目数
+		    </div>
+		    <select ng-options="item.value for item in nums track by item.value" ng-model="selection.selectedNum">
+		    </select>
+		  </li>
+	</ul>
+
+<div class="padding" style="margin-top: 30px;">
+	<a class="button button-block button-energized" ng-click="doStart()">开始</a>
+</div>
+</ion-content>
